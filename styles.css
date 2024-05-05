@@ -1,0 +1,171 @@
+/* ************************************CSS RESET****************************** */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-bg:#182052 ;
+    --color-secondary:#d7461d;
+}
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    position: relative;
+    background: url("/images/hero.jpg") rgba(24, 32, 82, 0.95) center/cover no-repeat;
+    background-blend-mode: darken;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+html {
+    font-size: 62.5%;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span{
+    font-size: 1.2rem;
+}
+section{
+    padding: 6.4rem 0;
+}
+.container{
+    max-width: 90rem;
+    width: 90%;
+    margin: 0 auto;
+
+}
+.primary-heading{
+    font-size: 4rem;
+}
+.hero-panel{
+    flex: 1;
+}
+.registration-panel{
+    flex: 1;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    gap: 1.5rem;
+    padding: 2.2rem 4.2rem;
+    border-radius: 5rem;
+    transform: translateX(200%);
+    transition: all 0.5s;
+}
+.registration-form {
+    flex-direction: column;
+    gap: 3.2rem;
+    width: 90%;
+}
+.input-field {
+    position: relative;
+    width: 100%;
+}
+.input-data {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    color: white;
+    outline: none;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 5rem;
+    font-weight: 500;
+}
+
+.input-label {
+    position: absolute;
+    left: 1rem;
+    top: -2rem;
+    color: white;
+    cursor: text;
+    transition: all 0.3s;
+    font-size: 1.2rem;
+    padding:0 0.5rem;
+    font-weight: 700;
+}
+.visibility-icon{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    cursor: not-allowed;
+    font-size: 1.2rem;
+}
+.input-data:focus ~ .visibility-icon,
+.input-data:not(:placeholder-shown):not(:focus) ~ .visibility-icon{
+    cursor: pointer;
+}
+.btn{
+    width: 50%;
+    padding: 1.2rem;
+    border-radius: 5rem;
+    border: none;
+    background-color: var(--color-secondary);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: center;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+.btn:hover{
+    background: #EF6B48;
+}
+.icons{
+    gap: 2rem;
+}
+.icon{
+    font-size: 2.5rem;
+    color: white;
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+}
+.icon:hover{
+    transform: scale(1.1);
+    color: var(--color-secondary);
+}
+
+.hero-panel{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    padding: 4.8rem;
+    transition: all 0.5s;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    top: -15rem;
+    font-size: 4rem;
+    color: var(--color-secondary);
+    transform: translateY(-400%);
+    transition: all 0.5s;
+}
+.hero-msg{
+    font-size: 4.2rem;
+    transition: all 0.5s;
+    transform: translateX(-400%);
+    font-weight: 700;
+    color: white;
+    position: relative;
+}
+.hero-msg::before{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 3px;
+    background-color: var(--color-secondary);
+    bottom: -2rem;
+    left: 0;
+}
